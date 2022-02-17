@@ -230,17 +230,17 @@ function getBiggestBoxOfficeMovie(movies) {
   if (movies.length === 0) {
     return null;
   }
-  let biggestMov = "";
-  let highest = movies[0];
+  let bigMov = "";
+  let highest = 0;
   for (let movie of movies) {
-    if (movie.boxOffice > highest.boxOffice) {
+    if (movie.boxOffice > highest) {
       highest = movie.boxOffice;
-      biggestMov = highest.title
+      bigMov = movie.title;
     
     }
   }
 
-  return biggestMov``;
+  return bigMov;
 }
 
 // Do not change anything below this line.
